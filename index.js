@@ -16,6 +16,11 @@ app.get("/courses/:id", (req, res) => {
     const singleCourses = courses.find(n => n._id === id)
     res.send(singleCourses)
 })
+app.get("/courses/pd/:id", (req, res) => {
+    const id = req.params.id;
+    const singleCourses = courses.find(n => n._id === id)
+    res.send(singleCourses)
+})
 app.listen(port, () => {
     console.log('Course Details Server running on', port);
 })
